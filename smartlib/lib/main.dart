@@ -42,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
-
       ),
       drawer: Drawer(
         backgroundColor: Colors.tealAccent.shade400,
@@ -53,12 +52,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+
                 GestureDetector(
                   onTap: _incrementCounter,
                   child:Row(
                     children: [
-                      IconButton(onPressed: (){}, icon: Icon(Icons.settings)),
+                      Icon(Icons.settings),
                       Text("Profile")
                       ],
                     ),
@@ -74,18 +75,110 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top:17.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Card(
+                    color: const Color.fromARGB(255, 83, 246, 205),
+                    elevation: 0.0,
+                    child:Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(children: [
+                        const Text('Books Issued'),
+                        Text(
+                          '$_counter',
+                          style: Theme.of(context).textTheme.headlineMedium,  
+                        ),
+                      ],),
+                    ),
+                  ),
+                  Card(
+                    color: const Color.fromARGB(255, 83, 246, 205),
+                    elevation: 0.0,
+                    child:Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(children: [
+                        const Text('Total Fine Issued'),
+                        Text(
+                          '$_counter',
+                          style: Theme.of(context).textTheme.headlineMedium,  
+                        ),
+                      ],),
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
-            const Text('You have pushed the button this many times:'),
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Book Name"),
-              subtitle: Text("author"),
-              trailing: Text("Issue date"),
+            Text("Issued Books Details"),          
+            const SizedBox(height: 20,),
+            Expanded(
+              child: SingleChildScrollView( 
+                child: Column( 
+                children: <Widget>[
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name"),
+                    subtitle: Text("author"),
+                    trailing: Text("Issue date"),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(),
+                    title: Text("Book Name1"),
+                    subtitle: Text("author1"),
+                    trailing: Text("Issue date1"),
+                  ),
+                  ]
+                ),
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            const SizedBox(height: 15,),
+            
           ],
         ),
       ),
