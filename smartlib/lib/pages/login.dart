@@ -52,7 +52,6 @@ class _Login_SLState extends State<Login_SL> {
         ),
 
         child: Center(
-          // <-- Fix: Center/Column instead of Expanded
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Column(
