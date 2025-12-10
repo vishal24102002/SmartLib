@@ -29,7 +29,7 @@ class _Login_SLState extends State<Login_SL> {
       extendBody: true,
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.875),
+          color: Colors.white.withValues(alpha: 0.850),
           gradient:LinearGradient(
             colors: [
               Colors.blueAccent,
